@@ -24,8 +24,3 @@ export async function POST(request) {
     return Response.json({ error: 'Failed to generate tasks' }, { status: 500 });
   }
 }
-
-Click "Commit new file"
-Then upload the updated package.json and DailyDashboard.jsx the same way you did before. Let me know how it goes!
-
-
