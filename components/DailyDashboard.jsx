@@ -480,7 +480,7 @@ function MarketPanel() {
                       <p className="text-xs font-bold text-gray-900">{v.term}</p>
                       <p className="text-xs text-gray-600 mt-1">{v.definition}</p>
                       {v.analogy && (
-                        <p className="text-xs text-indigo-500 mt-1 italic">{v.analogy}</p>
+                        <p className="text-xs text-indigo-500 mt-1 italic">{v.analogy || v.whyItMatters}</p>
                       )}
                     </div>
                   ))}
