@@ -75,7 +75,7 @@ export async function GET() {
             type: 'mention',
             from: fromName,
             channel: channelName,
-            text: (match.text || '').replace(/<@[A-Z0-9]+>/g, '@user').slice(0, 200),
+            text: (match.text || '').replace(/<@[A-Z0-9]+\|?[^>]*>/g, '').replace(/\s+/g, ' ').trim().slice(0, 200),
             timestamp: match.ts,
             permalink,
             time: new Date(parseFloat(match.ts) * 1000).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
